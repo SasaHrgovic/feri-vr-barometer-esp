@@ -193,7 +193,7 @@ void measure() {
   data.addInt("pressure", pressure);
   data.addInt("temperature", temperature);
   data.addString("sessionUid", _lastSessionUid);
-  data.addDouble("humidity", 0.0f);
+  data.addDouble("humidity", humidity);
 
   if (Firebase.pushJSON(firebaseData, "measurements", data)) {
     Serial.println(firebaseData.jsonData());
